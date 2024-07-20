@@ -4,7 +4,9 @@ function App() {
 
   return (
     <>
-      <h1>Hola mundo</h1>
+      <header className=" bg-teal-400 py-5">
+        <h1 className="text-center text-4xl font-black">Tip calculator and inquiries</h1>
+      </header>
     </>
   )
 }
