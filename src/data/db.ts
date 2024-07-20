@@ -3,42 +3,42 @@ import { MenuItem } from "../types";
 export const menuItems: MenuItem[] = [
   {
     "id": 1,
-    "name": "Pizza a la Leña Chica",
+    "name": "Small Wood-fired Pizza",
     "price": 30
   },
   {
     "id": 2,
-    "name": "Pizza a la Leña Mediana",
+    "name": "Medium Wood-fired Pizza",
     "price": 50
   },
   {
     "id": 3,
-    "name": "Rebanada de Pay de Limón",
+    "name": "Slice of Lemon Pie",
     "price": 30
   },
   {
     "id": 4,
-    "name": "Rebanada de Pastel de Chocolate",
+    "name": "Slice of Chocolate Cake",
     "price": 30
   },
   {
     "id": 5,
-    "name": "Jugo de Naranja",
+    "name": "Orange Juice",
     "price": 15
   },
   {
     "id": 6,
-    "name": "Pizza a la Leña Grande",
+    "name": "Large Wood-fired Pizza",
     "price": 70
   },
   {
     "id": 7,
-    "name": "Rib Eye 800g",
+    "name": "800g Rib Eye",
     "price": 100
   },
   {
     "id": 8,
-    "name": "Jugo de Naranja",
+    "name": "Orange Juice",
     "price": 15
   },
   {
@@ -48,17 +48,17 @@ export const menuItems: MenuItem[] = [
   },
   {
     "id": 10,
-    "name": "Rebanada de Pay de Queso",
+    "name": "Slice of Cheesecake",
     "price": 30
   },
   {
     "id": 11,
-    "name": "Café Americano",
+    "name": "Americano Coffee",
     "price": 20
   },
   {
     "id": 12,
-    "name": "Café Capuchino",
+    "name": "Cappuccino Coffee",
     "price": 40
   }
 ]
