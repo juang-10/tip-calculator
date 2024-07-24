@@ -8,11 +8,9 @@ type OrderTotalsProps = {
 }
 
 export const OrderTotals = ({ order, tip }: OrderTotalsProps ) => {
-console.log("🚀 ~ OrderTotals ~ tip:", tip)
 
   const subTotalAmount = useMemo(() => {
     return order.reduce((acc, item) => {
-      console.log({acc, item})
       return acc + (item.price * item.quantity)
     }, 0)
   }, [order])

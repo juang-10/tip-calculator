@@ -29,11 +29,9 @@ export const useOrder = () => {
           ? {...idExists, quantity: orderItem.quantity - 1} 
           : orderItem
       )
-      console.log({updateOrder})
       setOrder(updateOrder);
     } else {
       const newOrder = order.filter((item) => item.id !== id);
-      console.log("🚀 ~ removeItem ~ newOrder:", newOrder)
       setOrder( newOrder );
     }
   }
