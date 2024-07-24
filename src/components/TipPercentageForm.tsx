@@ -34,7 +34,7 @@ export const TipPercentageForm = ({ setTip }: TipPercentageFormProps) => {
               type="radio"
               name="tip"
               value={tip.value}
-              onChange={ e => setTip(+e.target.valueAsNumber) }
+              onChange={ e => setTip(+e.target.value) }
             />
           </div>
         ))}
