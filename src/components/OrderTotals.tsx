@@ -4,9 +4,11 @@ import { formatCurrency } from '../helpers/index';
 
 type OrderTotalsProps = {
   order: OrderItem[];
+  tip: number;
 }
 
-export const OrderTotals = ({ order }: OrderTotalsProps ) => {
+export const OrderTotals = ({ order, tip }: OrderTotalsProps ) => {
+console.log("🚀 ~ OrderTotals ~ tip:", tip)
 
   const subTotalAmount = useMemo(() => {
     return order.reduce((acc, item) => {
@@ -14,6 +16,9 @@ export const OrderTotals = ({ order }: OrderTotalsProps ) => {
       return acc + (item.price * item.quantity)
     }, 0)
   }, [order])
+
+  const tipAmount = useMemo(() => subTotalAmount * tip, [tip, order])
+  const totalAmount = useMemo(() => subTotalAmount + tipAmount, [subTotalAmount, tipAmount])
 
   return (
     <>
@@ -23,10 +28,10 @@ export const OrderTotals = ({ order }: OrderTotalsProps ) => {
           <span className="font-bold">{formatCurrency(subTotalAmount)}</span>
         </p>
         <p>Tip {''}
-          <span className="font-bold">$0</span>
+          <span className="font-bold">{formatCurrency(tipAmount)}</span>
         </p>
         <p>Total payable {''}
-          <span className="font-bold">$0</span>
+          <span className="font-bold">{formatCurrency(totalAmount)}</span>
         </p>
       </div>
       
